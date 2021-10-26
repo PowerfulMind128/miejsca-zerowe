@@ -13,13 +13,17 @@ int main()
 	
 	int exitcode = oblicz_mz(a, b, wynik);
 	
-	if( exitcode == 0 ) //wyjscie z sukcesem
+	if( exitcode == 0 )
 	{
-		cout << "Miejsce zerowe: x = " << wynik << endl;
+		cout << "Funkcja ta nie posiada miejsc zerowych." << endl;
 	}
-	else if( exitcode == 1)
+	else if( exitcode == 1 )
 	{
-		cerr << "Blad danych: a jest rowne zeru." << endl;
+		cout << "Funkcja ta ma jedno miejsce zerowe w x = " << wynik << "." << endl;
+	}
+	else if( exitcode == 2 )
+	{
+		cout << "Funkcja ta ma nieskonczenie wiele miejsc zerowych." << endl;
 	}
 	
 	return 0;
