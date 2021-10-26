@@ -8,8 +8,28 @@ int main()
 	cout << "LICZENIE MIEJSC ZEROWYCH FUNKCJI LINIOWEJ" << endl;
 	
 	double a, b, wynik;
-	cout << "Podaj parametry A oraz B funkcji." << endl;
-	cin >> a >> b;
+	
+	cout << "Podaj parametr A funkcji: ";
+	cin >> a;
+	while( cin.fail() )
+	{
+		cin.clear(); cin.ignore(1000, '\n');
+		cout << "Parametr nie jest liczba. Wprowadz jeszcze raz: ";
+		cin >> a;
+	}
+	cin.ignore(1000, '\n');
+	
+	
+	cout << "Podaj parametr B funkcji: ";
+	cin >> b;
+	while( cin.fail() )
+	{
+		cin.clear(); cin.ignore(1000, '\n');
+		cout << "Parametr nie jest liczba. Wprowadz jeszcze raz: ";
+		cin >> b;
+	}
+	cin.ignore(1000, '\n');
+	
 	
 	int exitcode = oblicz_mz(a, b, wynik);
 	
