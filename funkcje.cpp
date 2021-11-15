@@ -20,7 +20,7 @@ int oblicz_mz_kierunkowa(double a, double b, double& wynik)
 	if(a!=0) //jedno m.z.
 	{
 		wynik = -b/a;
-		return 1;	
+		return 1;
 	}
 	else
 	{
