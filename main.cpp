@@ -7,17 +7,24 @@ int main()
 {
 	cout << "LICZENIE MIEJSC ZEROWYCH FUNKCJI LINIOWEJ" << endl;
 
-	double a, b, c, wynik;
-	int postac_funkcji; //[1] kierunkowa, y = Ax + B; [2] ogolna, Ax + By + C = 0
+	double a, b, c, mz1, mz2;
+	/*
+	opisy postaci funkcji:
+	[1] kwadratowa, y = Ax^2 + Bx + C
+	[2] kierunkowa, y = Ax + B
+	[3] ogolna, Ax + By + C = 0
+	*/
+	int postac_funkcji;
 
 
 	cout << "Podaj postac funkcji, ktora chcesz wprowadzic." << endl
-		 << "[1] Kierunkowa, y = Ax + B" << endl
-		 << "[2] ogolna, Ax + By + C = 0" << endl;
+		 << "[1] Kwadratowa, y = Ax^2 + Bx + C" << endl
+		 << "[2] Kierunkowa, y = Ax + B" << endl
+		 << "[3] ogolna, Ax + By + C = 0" << endl;
 	cin >> postac_funkcji;
 
 	//przy bledzie strumienia program wpisze zero, wiec ponizszy warunek zajdzie
-	while(postac_funkcji != 1 && postac_funkcji != 2)
+	while(postac_funkcji != 1 && postac_funkcji != 2 && postac_funkcji != 3)
 	{
 		if( cin.fail() )
 		{
@@ -28,7 +35,7 @@ int main()
 		else
 		{
 			cin.clear(); cin.ignore(1000, '\n');
-			cout << "Parametr moze przyjac tylko wartosci od 1 do 2 wlacznie. Wprowadz jeszcze raz: ";
+			cout << "Parametr moze przyjac tylko wartosci od 1 do 3 wlacznie. Wprowadz jeszcze raz: ";
 			cin >> postac_funkcji;
 		}
 	}
@@ -56,7 +63,7 @@ int main()
 	}
 	cin.ignore(1000, '\n');
 
-	if(postac_funkcji == 2) //ogolna
+	if(postac_funkcji == 1 || postac_funkcji == 3) //kwadratowa albo liniowa ogolna
 	{
 		cout << "Podaj parametr C funkcji: ";
 		cin >> c;
@@ -70,7 +77,7 @@ int main()
 	}
 
 
-	int exitcode = oblicz_mz(postac_funkcji, a, b, c, wynik);
+	int exitcode = oblicz_mz(postac_funkcji, a, b, c, mz1, mz2);
 
 	switch(exitcode)
 	{
@@ -78,9 +85,12 @@ int main()
         cout << "Funkcja ta nie posiada miejsc zerowych." << endl;
         break;
     case 1:
-        cout << "Funkcja ta ma jedno miejsce zerowe w x = " << wynik << "." << endl;
+        cout << "Funkcja ta ma jedno miejsce zerowe w x = " << mz1 << "." << endl;
         break;
     case 2:
+        cout << "Funkcja ta ma dwa miejsce zerowe: x = " << mz1 << " lub x = " << mz2 << "." << endl;
+        break;
+    case 3:
         cout << "Funkcja ta ma nieskonczenie wiele miejsc zerowych." << endl;
         break;
     case -1:
