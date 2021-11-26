@@ -1,6 +1,7 @@
 #ifndef funkcje_hpp
 #define funkcje_hpp
 
+
 /*
 zwraca kody wyjscia:
 0 - brak miejsc zerowych
