@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	cout << "LICZENIE MIEJSC ZEROWYCH FUNKCJI LINIOWEJ" << endl;
+	cout << "LICZENIE MIEJSC ZEROWYCH FUNKCJI" << endl;
 
 	double a, b, c, mz1, mz2;
 	/*
