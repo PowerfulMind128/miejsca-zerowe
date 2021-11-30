@@ -20,7 +20,7 @@ int main()
 	cout << "Podaj postac funkcji, ktora chcesz wprowadzic." << endl
 		 << "[1] Kwadratowa, y = Ax^2 + Bx + C" << endl
 		 << "[2] Kierunkowa, y = Ax + B" << endl
-		 << "[3] ogolna, Ax + By + C = 0" << endl;
+		 << "[3] Ogolna, Ax + By + C = 0" << endl;
 	cin >> postac_funkcji;
 
 	//przy bledzie strumienia program wpisze zero, wiec ponizszy warunek zajdzie
@@ -88,7 +88,7 @@ int main()
         cout << "Funkcja ta ma jedno miejsce zerowe w x = " << mz1 << "." << endl;
         break;
     case 2:
-        cout << "Funkcja ta ma dwa miejsce zerowe: x = " << mz1 << " lub x = " << mz2 << "." << endl;
+        cout << "Funkcja ta ma dwa miejsca zerowe: x = " << mz1 << " lub x = " << mz2 << "." << endl;
         break;
     case 3:
         cout << "Funkcja ta ma nieskonczenie wiele miejsc zerowych." << endl;
