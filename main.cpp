@@ -18,9 +18,12 @@ int main()
 
 
 	cout << "Podaj postac funkcji, ktora chcesz wprowadzic." << endl
+         << "Mozliwe opcje:" << endl
 		 << "[1] Kwadratowa, y = Ax^2 + Bx + C" << endl
 		 << "[2] Kierunkowa, y = Ax + B" << endl
-		 << "[3] Ogolna, Ax + By + C = 0" << endl;
+		 << "[3] Ogolna, Ax + By + C = 0" << endl
+		 << endl
+		 << "Twoj wybor to: ";
 	cin >> postac_funkcji;
 
 	//przy bledzie strumienia program wpisze zero, wiec ponizszy warunek zajdzie
