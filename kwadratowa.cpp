@@ -12,8 +12,9 @@ int oblicz_mz_kwadratowa(
     double a, double b, double c,
     double& mz1, double& mz2)
 {
-    //nie pozwalamy na a = 0 (inaczej ryzykujemy dzielenia przez zero)
-    if(a==0) return -1;
+    //gdy a = 0, funkcja zmienia sie w liniowa kierukowa
+    if(a==0)
+        return oblicz_mz_kierunkowa(b, c, mz1);
 
     double delta = b*b - 4*a*c, pdelta;
 
