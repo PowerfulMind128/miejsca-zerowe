@@ -5,7 +5,7 @@
 
 //opisy funkcji znajduja sie w liniowa.hpp
 
-int oblicz_mz_kierunkowa(
+int oblicz_mz_liniowa_kierunkowa(
     double a, double b,
     double& wynik)
 {
@@ -27,7 +27,7 @@ int oblicz_mz_kierunkowa(
 	}
 }
 
-int oblicz_mz_ogolna(
+int oblicz_mz_liniowa_ogolna(
     double a, double b, double c,
     double& wynik)
 {
@@ -35,7 +35,7 @@ int oblicz_mz_ogolna(
 	dla postaci ogolnej, przy szukaniu mz wystarczy pominac
 	parametr B i odpowiednio przepisac pozostale parametry:
 	*/
-	return oblicz_mz_kierunkowa(a, c, wynik);
+	return oblicz_mz_liniowa_kierunkowa(a, c, wynik);
 }
 
 #endif

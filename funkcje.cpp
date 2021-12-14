@@ -15,14 +15,17 @@ int oblicz_mz(
 {
     switch(postac_funkcji)
     {
-    case 1: //kwadratowa
-        return oblicz_mz_kwadratowa(a, b, c, mz1, mz2);
+    case 1: //kwadratowa ogolna
+        return oblicz_mz_kwadratowa_ogolna(a, b, c, mz1, mz2);
         break;
-    case 2: //liniowa kierunkowa
-        return oblicz_mz_kierunkowa(a, b, mz1);
+    case 2: //kwadratowa kanoniczna
+        return oblicz_mz_kwadratowa_kanoniczna(a, b, c, mz1, mz2);
         break;
-    case 3: //liniowa ogolna
-        return oblicz_mz_ogolna(a, b, c, mz1);
+    case 3: //liniowa kierunkowa
+        return oblicz_mz_liniowa_kierunkowa(a, b, mz1);
+        break;
+    case 4: //liniowa ogolna
+        return oblicz_mz_liniowa_ogolna(a, b, c, mz1);
         break;
     default:
         return -1; //wypadek przy pracy

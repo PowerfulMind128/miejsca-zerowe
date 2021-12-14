@@ -11,8 +11,15 @@ Zwraca kody wyjscia:
 
 Zmiennym "mz1" oraz "mz2" przypisuje sie wartosc tylko przy zwroceniu 1 lub 2.
 */
-int oblicz_mz_kwadratowa(
+int oblicz_mz_kwadratowa_ogolna(
     double a, double b, double c,
+    double& mz1, double& mz2);
+
+/*
+Zwraca kody wyjscia w sposob identyczny jak oblicz_mz_kwadratowa_ogolna() (zobacz)
+*/
+int oblicz_mz_kwadratowa_kanoniczna(
+    double a, double p, double q,
     double& mz1, double& mz2);
 
 #endif
