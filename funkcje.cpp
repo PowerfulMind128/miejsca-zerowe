@@ -18,7 +18,7 @@ int oblicz_mz(
     case 1: //kwadratowa ogolna
         return oblicz_mz_kwadratowa_ogolna(a, b, c, mz1, mz2);
         break;
-    case 2: //kwadratowa kanoniczna
+    case 2: //kwadratowa kanoniczna (tutaj P = B, Q = C)
         return oblicz_mz_kwadratowa_kanoniczna(a, b, c, mz1, mz2);
         break;
     case 3: //liniowa kierunkowa

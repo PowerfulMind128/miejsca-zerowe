@@ -20,7 +20,7 @@ int oblicz_mz_liniowa_kierunkowa(
 		{
 			return 3;
 		}
-		else //a==0 i b!=0: brak m.z. (prosta rownolegla do OX niepokrywajaca sie z nia)
+		else //a==0 i b!=0: brak m.z. (prosta rownolegla do osi OX niepokrywajaca sie z nia)
 		{
 			return 0;
 		}
